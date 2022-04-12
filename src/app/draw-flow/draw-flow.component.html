@@ -1,0 +1,35 @@
+
+  <div class="wrapper" >
+    <div class="col">
+      <div class="drag-drawflow" draggable="true" (dragstart)="drag($event)" data-node="aws">
+        <i class="fab fa-aws"></i><span> Node1</span>
+      </div>
+      <div class="drag-drawflow" draggable="true" (dragstart)="drag($event)" data-node="aws">
+        <i class="fab fa-aws"></i><span> Node2</span>
+      </div>
+      <div class="drag-drawflow" draggable="true" (dragstart)="drag($event)" data-node="aws">
+        <i class="fab fa-aws"></i><span> Node3</span>
+      </div>
+    </div>
+    <div class="col-right">
+      <div class="menu">
+        <ul>
+          <li class="selected">Home</li>
+        </ul>
+      </div>
+      <div id="drawflow" (drop)="drop($event)" (dragover)="allowDrop($event)" >
+
+        <div class="btn-export" (click)="exportToCsvFile()">Export</div>
+        <div class="btn-clear" (click)="clear_drawFlow()">Clear</div>
+        <div class="btn-lock">
+          <i id="lock" class="fa fa-lock" (click)="lock()"></i>
+          <i id="unlock" class="fa fa-unlock" (click)="unlock()" style="display:none;"></i>
+        </div>
+        <div class="bar-zoom">
+          <i class="fa fa-search-minus" (click)="zoom_out()"></i>
+          <i class="fa fa-search" (click)="zoom_reset()"></i>
+          <i class="fa fa-search-plus" (click)="zoom_in()"></i>
+        </div>
+      </div>
+    </div>
+  </div>

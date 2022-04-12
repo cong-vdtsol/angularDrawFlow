@@ -1,5 +1,8 @@
 {
   "$schema": "./node_modules/@angular/cli/lib/config/schema.json",
+  "cli": {
+    "analytics": "177c2744-b6a4-4cca-b5f7-0226cbfd40b1"
+  },
   "version": 1,
   "newProjectRoot": "projects",
   "projects": {
@@ -27,7 +30,9 @@
               "src/assets"
             ],
             "styles": [
-              "src/styles.css"
+              "src/styles.css",
+              "./node_modules/drawflow/dist/drawflow.min.css",
+              "src/assets/styles/drawflow.css"
             ],
             "scripts": []
           },
